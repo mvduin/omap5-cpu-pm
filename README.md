@@ -45,4 +45,6 @@ after a change) taken on my BeagleBoard-X15 while idle:
 * 61 ͏°C with cpufreq governor "performance" (1.5 GHz) and requested power state ON
 * 56 ͏°C with cpufreq governor "powersave" (1.0 GHz) and requested power state ON
 * 55 ͏°C with cpufreq governor "performance" (1.5 GHz) and requested power state INACTIVE
+* 52 ͏°C with cpufreq governor "powersave" (1.0 GHz) and requested power state INACTIVE
 * 51 ͏°C with cpufreq governor "performance" (1.5 GHz) and requested power state RETENTION
+* 50 ͏°C with cpufreq governor "powersave" (1.0 GHz) and requested power state RETENTION
