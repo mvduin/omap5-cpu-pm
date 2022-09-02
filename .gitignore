@@ -1,0 +1,3 @@
+.dep/
+*.o
+/omap5-cpu-pm
