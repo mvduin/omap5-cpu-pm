@@ -30,10 +30,19 @@ In RETENTION state the cpu voltage is also lowered.
 
 Note that lower power states will increase wake-up latency.
 
+## Issues
+
+Enabling cpu power management appears to mess with cpu load measurement, causing
+falsely high system load to be reported by `uptime`. This also appears to cause the
+"ondemand" cpufreq governor to keep the cpu frequency unnecessarily high.  On the
+other hand, enabling cpu power management appears to be more effective in reducing
+power dissipation than reducing the cpu frequency (see below).
+
 ## Effect on CPU temperature
 
 Some example cpu temperature measurements (making sure to give it plenty of time to settle
 after a change) taken on my BeagleBoard-X15 while idle:
-* 61 ͏°C if the requested power state is ON
-* 55 ͏°C if the requested power state is INACTIVE
-* 51 ͏°C if the requested power state is RETENTION
+* 61 ͏°C with cpufreq governor "performance" (1.5 GHz) and requested power state ON
+* 56 ͏°C with cpufreq governor "powersave" (1.0 GHz) and requested power state ON
+* 55 ͏°C with cpufreq governor "performance" (1.5 GHz) and requested power state INACTIVE
+* 51 ͏°C with cpufreq governor "performance" (1.5 GHz) and requested power state RETENTION
