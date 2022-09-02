@@ -29,3 +29,11 @@ In both INACTIVE and RETENTION states the cpu clock is disabled.
 In RETENTION state the cpu voltage is also lowered.
 
 Note that lower power states will increase wake-up latency.
+
+## Effect on CPU temperature
+
+Some example cpu temperature measurements (making sure to give it plenty of time to settle
+after a change) taken on my BeagleBoard-X15 while idle:
+* 61 ͏°C if the requested power state is ON
+* 55 ͏°C if the requested power state is INACTIVE
+* 51 ͏°C if the requested power state is RETENTION
